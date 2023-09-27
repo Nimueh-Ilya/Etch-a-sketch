@@ -1,5 +1,11 @@
 const container = document.querySelector('.container')
-const gridNumber = 900
+console.log(container.style);
+let number = 10
+let gridNumber = number**2
+let R = 255
+let G = 255
+let B = 255
+let mode = 'rainbow'
 
 for (let index = 1; index <= gridNumber;  index++) {
     let divLoop = document.createElement('div')
@@ -22,10 +28,20 @@ function applyColor (e) {
         return
     }
     else {
-        e.target.style.backgroundColor = 'black'
+        if (mode == 'standard') {
+            e.target.style.backgroundColor = 'blue'
+        }
+        else if (mode == 'rainbow') {
+            randomColors()
+            e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`        }
     }
 }
 nodes.forEach(node => {
     node.addEventListener('mouseover',applyColor)
     node.addEventListener('mousedown',applyColor)
 })
+function randomColors() {
+    R = Math.random()* 255
+    G = Math.random()* 255
+    B = Math.random()* 255
+}
