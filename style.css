@@ -2,6 +2,13 @@
     padding: 0;
     margin: 0;
 }
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 690px;
+    margin: 10px;
+}
 .main-container {
     display: flex;
     flex-direction: column;
@@ -22,4 +29,22 @@
 }
 .etch-node:hover {
     background-color: rgb(220, 220, 220);
+}
+.grid-number {
+    width: 40px;
+}
+.rainbow-toggle, .standard-toggle, .reset-grid {
+    padding: 3px;
+    border-style: solid;
+    border-radius: 10%;
+    border-width: 2px;
+}
+.rainbow-toggle:hover, .standard-toggle:hover, .reset-grid:hover {
+    padding: 3px;
+    border-style: solid;
+    border-radius: 10%;
+    border-width: 2px;
+    color: white;
+    background-color: rgb(109, 122, 179);
+    border-color: black;
 }
